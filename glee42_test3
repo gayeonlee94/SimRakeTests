@@ -1,0 +1,15 @@
+task pack: [:shower, :getDressed] do
+	puts "packed the bag,"
+end
+
+task shower: :getup do
+	puts "took shower,"
+end
+
+task getDressed: [:getup,:shower] do
+	puts "got dressed,"
+end
+
+task :getup do
+	puts "got up,"
+end
